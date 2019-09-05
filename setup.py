@@ -4,13 +4,14 @@ lambdata-cicbeast - Collection of DS Helper Functions.
 import setuptools
 REQUIRED = [
     "numpy",
-    "pandas"
+    "pandas",
+    "scipy.stats.chisquare"
 ]
 with open("README.md", "r") as fh:
     LONG_DESCRIPTION = fh.read()
 setuptools.setup(
     name="lambdata-cicbeast",
-    version="0.0.1",
+    version="0.0.2",
     author="cicbeast",
     description="Collection of DS helper functions",
     long_description=LONG_DESCRIPTION,
