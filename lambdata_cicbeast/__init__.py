@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-from scipi.stats import chisquare
+from scipy.stats import chisquare
 
 """
 lambdata-cicbeast - Collection of DS Helper Functions
