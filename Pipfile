@@ -5,11 +5,13 @@ verify_ssl = true
 
 [dev-packages]
 twine = "*"
+pylint = "*"
 
 [packages]
 numpy = "*"
 pandas = "*"
 matplotlib = "*"
+scipy-stats-chisquare = "*"
 
 [requires]
 python_version = "3.6"
