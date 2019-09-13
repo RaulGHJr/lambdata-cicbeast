@@ -1,6 +1,5 @@
 import pandas as pd
 import numpy as np
-import matplotlib.pyplot as plt
 from scipy.stats import chisquare
 
 """
@@ -25,13 +24,13 @@ def cont_chi2(X, y, ddof=1, dropna=False):
 
 
 # Date Separater
-def date_sep(X, infer_dtf=True):
+def date_sep(X, datecol, infer_dtf=True): #where X is the dataframe and datecol is the date column
 
-    X['date'] = pd.to_datetime(X['date'], infer_datetime_format=infer_dtf)
+    X[datecol] = pd.to_datetime(X[datecol], infer_datetime_format=infer_dtf)
 
-    X['year'] = X['date'].dt.year
-    X['month'] = X['date'].dt.month
-    X['day'] = X['date'].dt.day
+    X['year'] = X[datecol].dt.year
+    X['month'] = X[datecol].dt.month
+    X['day'] = X[datecol].dt.day
 
     X = X.drop(columns=['date'])
 
